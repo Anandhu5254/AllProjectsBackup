@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         emp={id:102,name:"ShyamKumar",salary:40000}
+         document.write(emp.id+" "+emp.name+" "+emp.salary,"<br>");
+
+         var objectname=new Object();
+         objectname.id=101;
+         objectname.name="RaviMalik";
+         objectname.salary=50000;
+         document.write(objectname.id+" "+objectname.name+" "+objectname.salary,"<br>");
+
+         function abc(id,name,salary)
+         {
+            this.id=id;
+            this.name=name;
+            this.salary=salary;
+         }
+          a=new abc(101,"Sreenandha",25000);
+          document.write(a.id+" "+a.name+" "+a.salary);
+
+    </script>
+</body>
+</html>

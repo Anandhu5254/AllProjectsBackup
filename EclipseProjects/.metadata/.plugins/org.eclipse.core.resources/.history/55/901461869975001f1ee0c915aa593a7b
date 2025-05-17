@@ -1,0 +1,20 @@
+package loopingexamples;
+
+public class fibonacci {
+	public static void main(String...args)
+
+	{
+		int fibonacci=0;
+		int i=1;
+		do
+		{
+			System.out.println(fibonacci);
+			i++;
+		}
+		while(i<=10);
+		{
+			fibonacci+=i;
+		}
+	}
+}
+		

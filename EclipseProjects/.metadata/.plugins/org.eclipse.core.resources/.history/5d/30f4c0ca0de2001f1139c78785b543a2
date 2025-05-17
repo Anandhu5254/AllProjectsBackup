@@ -1,0 +1,32 @@
+package javadatabse;
+
+import java.sql.Connection;
+import java.sql.Statement;
+
+public class OfficeInsert {
+	
+	public static void main(String[] args) {
+		
+		Connection conn=null;
+		Statement stmt=null;
+		
+		try {
+			  conn=OfficeJDBC.getConnection();
+			  stmt=conn.createStatement();
+//			  stmt.executeUpdate("insert into exam1 values(100,23,'Raj','Sharma')");
+//			  stmt.executeUpdate("insert into exam1 values(101,24,'Bala','Singh')");
+//			  stmt.executeUpdate("insert into exam1 values(102,25,'Anu','Priya')");
+//			  stmt.executeUpdate("insert into exam1 values(103,26,'Riya','Khan')");
+//			  stmt.executeUpdate("insert into exam1 values(104,27,'Karthika','Manoj')");
+			  stmt.executeUpdate("update exam1 set age=26 where employee_id=102");
+			  
+			  System.out.println("value inserted successfully");
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		
+	}
+
+}

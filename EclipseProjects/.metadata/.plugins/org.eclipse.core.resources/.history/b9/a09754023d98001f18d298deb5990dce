@@ -1,0 +1,30 @@
+package loopingexamples;
+
+abstract class Animal5 {
+
+public abstract void aniamlSound();
+public void sleep()
+{
+	System.out.println("zzz");
+}
+}
+class Pig2 extends Animal5{
+
+	@Override
+	public void aniamlSound() {
+		System.out.println("The pig says wee wee");
+		
+	}
+	
+}
+class Abstraction{
+	public static void main(String...args)
+	{
+		Pig2 p= new Pig2();
+		p.aniamlSound();
+	}
+}
+	
+
+	
+

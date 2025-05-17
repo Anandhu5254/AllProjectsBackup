@@ -1,0 +1,20 @@
+package loopingexamples;
+
+ class Programmer {
+
+float salary =40000;
+}
+class Worker extends Programmer{
+	
+	float bonus=15000;
+
+public static void main(String...args)
+{
+	Worker w=new Worker();
+	System.out.println("Salary of programmer is "+p.salary);
+	System.out.println("Bonus of programmer is "+p.bonus);
+}
+}
+
+
+

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function msg()
+        // {
+        //    alert("welcome to javascript");
+        // }
+        // msg();
+        // function getcube(number)
+        // {
+        //     alert(number*number*number);
+        // }
+        // getcube(5);
+//  function showMessage(from, text = "no text given") 
+//  {
+//  alert( from + ": " + text );
+//  }
+//  showMessage("Ann"); 
+
+// factorial of a number
+
+// function fact(n)
+// {
+//  let f=1;
+//  for(let i=1; i<=n; i++){
+
+//    f*=i;
+// }
+// console.log(f)
+// }
+
+// fact(5)
+
+// fibonacci series
+
+// function fibonacci(count) {
+//     let i = 1;
+//     let a = 0;
+//     let b = 1;
+//     let c;
+
+//     while (i <= count) {
+//         console.log(a);
+//         c = a + b;
+//         a = b;
+//         b = c;
+//         i++;
+//     }
+// }
+
+// fibonacci(10); // This will print the first 10 Fibonacci numbers
+
+// function fibonacci(count)
+// {
+//     let a=0;
+//     let b=1;
+//     let c;
+//     console.log(a);
+//     console.log(b);
+//     for(let i=2; i<=count; i++)
+// {
+//     c=a+b;
+//     console.log(c)
+//     a=b;
+//     b=c;
+// }
+// }
+// fibonacci(10);
+
+// palindrome number
+
+// let a=123;
+// let num=123;
+// let rev=0;
+// while(num>0)
+// {
+//    let rem=num%10;
+//    rev=rev*10+rem;
+//    num= Math.floor(num/10);
+// }
+// console.log(rev)
+// if(a==rev)
+// {
+//     console.log("It's a palindrome number")
+// }
+// else
+// {
+//     console.log("It's not a palindrome number")
+// }
+
+// Function with return value
+
+// function getInfo(){
+//  return"hello john! Howru?";
+//  }
+//  document.write(getInfo());
+
+//Local variables
+
+// let userName = "john";
+//  function showMessage()
+//   { 
+// let message = 'Hello, ' + userName; 
+// alert(message);
+//  } 
+// showMessage();
+
+// outer variables
+
+// let userName = 'John'; 
+// function showMessage()
+//  { 
+//     userName = "Bob"; 
+//     let message = 'Hello, '+userName;
+//     alert(message);
+//  } 
+//     alert( userName); 
+//     showMessage(); 
+//     alert( userName);
+
+// Number
+// let a="not a number"
+// let b=2;
+// alert(a/b);
+// alert(b/0);
+
+// String
+
+// let str="hello";
+// let str1="Welcome to javascript";
+// let result=`${str} ${str1}`
+// document.write(result);
+
+// The syntax of creating string object using new keyword is given below:
+
+// var stringname=new String("hello javascript string");
+// document.write(stringname)
+
+// Methods
+
+//charAt(index)Method
+
+let str="Welcome to Javascript";
+var s1="Hello";
+var s2="  javacript trim  ";
+document.write(str.charAt(2),"</br>");
+document.writeln(str+" ".concat(s1),"</br>");
+document.write(str.indexOf("to"),"</br>");
+document.write(str.toLowerCase(),"<br>");
+document.write(str.slice(1,4),"<br>");
+document.write(s2.trim(),"<br>");
+document.write(str.split(" "),"<br>");
+document.write(str.substr(1,4),"<br>");
+
+
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,27 @@
+package javadatabse;
+
+import java.sql.Connection;
+import java.sql.Statement;
+
+public class InsertIntoTable {
+
+	public static void main(String[] args) {
+		
+		Connection conn=null;
+		Statement statement=null;
+		String query="insert into emp values('Anandhu',111,23);"
+				+ "insert into emp values('Aju',112,22);";
+		try {
+			conn=TestJDBC.getConnection();
+			statement=conn.createStatement();
+			statement.executeUpdate(query);
+			statement.close();
+			conn.close();
+			System.out.println("Record inserted successfully");
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+	}
+}

@@ -1,0 +1,18 @@
+package loopingexamples;
+
+public class fibonacci {
+	public static void main(String...args)
+
+	{
+		int i=1; int a=0; int b =1; int c;
+		while(i<=10)
+		{
+			System.out.println(a+"");
+			c=a+b;
+			a=b;
+			b=c;
+			i++;
+		}
+	}
+}
+		

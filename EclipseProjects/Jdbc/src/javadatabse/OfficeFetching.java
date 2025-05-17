@@ -1,0 +1,28 @@
+package javadatabse;
+
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
+public class OfficeFetching {
+
+	public static void main(String[] args) {
+		
+		Connection conn=null;
+		Statement stmt=null;
+		try {
+			conn=OfficeJDBC.getConnection();
+			stmt=conn.createStatement();
+			ResultSet rs=stmt.executeQuery("select firstname from exam1 where firstname like 'a%'");
+			while(rs.next())
+			{
+				String FirstName=rs.getString("firstname");
+				System.out.println("Employee name starts with letter A is "+FirstName);
+			}
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+	}
+}

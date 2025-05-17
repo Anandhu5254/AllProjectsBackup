@@ -1,0 +1,46 @@
+package javadatabse;
+
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class OfficeDataRetrieving {
+
+	public static void main(String[] args) {
+		ResultSet rs=null;
+		Connection conn=null;
+		Statement stmt=null;
+		
+		try {
+			conn=OfficeJDBC.getConnection();
+			stmt=conn.createStatement();
+			 rs=stmt.executeQuery("select * from exam1");
+			while(rs.next()) {
+				
+				String id=rs.getString("employee_id");
+				String age=rs.getString("age");
+				String firstname=rs.getString("firstname");
+				String lastname=rs.getString("lastname");
+				System.out.println("Id:"+id);
+				System.out.println("Age:"+age);
+				System.out.println("FirstName:"+firstname);
+				System.out.println("LastName:"+lastname);
+				conn.close();
+				stmt.close();
+				rs.close();
+			}
+		}
+		catch (SQLException e) {
+		    e.printStackTrace();
+		} finally {
+		    try {
+		        if (rs != null) rs.close();
+		        if (stmt != null) stmt.close();
+		        if (conn != null) conn.close();
+		    } catch (SQLException e) {
+		        e.printStackTrace();
+		    }
+		
+	}
+}

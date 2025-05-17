@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function BigUser() {
+ this.name = "John";
+ return { name: "Godzilla" }; // <-- returns this object
+ }
+ console.log( new BigUser().name );
+
+ function SmallUser() {
+ this.name = "John";
+//  return; // <-- returns this
+ }
+ console.log( new SmallUser().name);
+
+ // Add method to Constructor
+ function User(name) {
+ this.name = name;
+ this.sayHi = function() {
+ console.log( "My name is: " + this.name );
+ };
+ }
+//  console.log(new User("aju").name)
+// new User().sayHi()
+let john = new User("John");
+john.sayHi();
+    </script>
+</body>
+</html>

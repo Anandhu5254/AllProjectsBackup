@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       let user = {
+       name: "John",
+       age: 30,
+       isAdmin: true ,// Boolean property
+       "like birds":true
+   };
+   console.log(user) // output original object
+   console.log(user.name) // Access properties
+   console.log(user.age)
+   console.log(user.isAdmin)
+   console.log(user["like birds"])
+   delete user.age
+   console.log(user)
+   console.log(user.age)
+   for(let key in user)
+   {
+    console.log(key)
+    console.log(user[key])
+
+   }
+
+
+
+
+
+    </script>
+</body>
+</html>

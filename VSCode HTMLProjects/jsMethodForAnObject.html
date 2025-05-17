@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User-Defined Objects</title>
+</head>
+<body>
+   <script>
+     function addPrice(amount)
+      {
+     this.price = amount; 
+      }
+ function book(title, author)
+  {
+ this.title = title;
+ this.author = author;
+ this.addPrice = addPrice;
+  }
+  var myBook = new book("Perl", "Mohtashim");
+ myBook.addPrice(100);
+ document.write("Book title is : " + myBook.title + "<br>");
+ document.write("Book author is : " + myBook.author + "<br>");
+ document.write("Book price is : " + myBook.price + "<br>");
+
+ // "this" in methods
+ let user={
+    name:"John",
+    age:28,
+    sayHi(){
+        alert(this.name)
+    }
+}
+ user.sayHi()
+ alert(user.age)
+ </script>
+</body>
+</html>

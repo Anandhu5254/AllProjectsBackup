@@ -1,0 +1,22 @@
+package loopingexamples;
+
+public class thisKeyword {
+
+String message;
+thisKeyword(String message)
+{
+	this.message=message;
+}
+void display()
+{
+	System.out.println(message);
+}
+public static void main(String...args)
+{
+	thisKeyword s1=new thisKeyword("Anju");
+	thisKeyword s2=new thisKeyword("Kiran");	
+	
+	s1.display();
+	s2.display();
+}
+}

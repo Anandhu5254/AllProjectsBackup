@@ -1,0 +1,25 @@
+button {
+    background-color: #13d119; /* Green background color */
+    border: none;
+    color: white; /* Text color */
+    padding: 8px 16px; /* Add padding for a larger button */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Cursor change on hover */
+    transition: all 0.3s ease; /* Smooth transition effect */
+  }
+  
+  button:hover {
+    background-color: #45a049; /* Darker green on hover */
+    transform: translateY(-2px); /* Slight lift effect on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+  }
+  
+  button:active {
+    transform: translateY(0); /* Button returns to normal when clicked */
+    box-shadow: none; /* Remove shadow when clicked */
+  }
+  

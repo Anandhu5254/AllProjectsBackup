@@ -1,0 +1,29 @@
+package javadatabse;
+
+import java.sql.Connection;
+import java.sql.Statement;
+
+public class TableCreation {
+
+	public static void main(String[] args) {
+		
+		Connection conn=null;
+		Statement statement=null;
+		
+		String query="create table(EMPLOYEE_ID NUMBER(5) NOT NULL,NAME VARCHAR(30) NOT NUL,SALARY NUMBER(10) NOT NULL,PRIMARY KEY(EMPLOYEE_ID))";
+		try {
+			conn=TestJDBC.getConnection();
+			statement=conn.createStatement();
+			statement.execute(query);
+			statement.close();
+			conn.close();
+			
+			System.out.println("Table created succesfuly");
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+		
+	}
+}
